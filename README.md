@@ -46,56 +46,64 @@ Goal:
 ---
 ## ⚙️ Investigation Steps (With evidence)
 
-- The provided PCAP dataset simulates a network forensic investigation scenario involving suspected harassment activity: 
-- Objective was to identify:
-  - The originating device
-  - The communication behavior
-  - Evidence of anonymous messaging activity
-- Analysis was conducted using packet-level inspection in Wireshark
-1. Loaded PCAP into Wireshark
+
+1. Initial Traffic Analysis
+- Loaded PCAP into Wireshark
 - Reviewed capture summary (duration, packets, size)
+  
 2. Identified active devices
 - Used Statistics → Endpoints
-- Found 192.168.15.4 as highest traffic generator (suspect)
+- Identified 192.168.15.4 as highest traffic generator (suspect)
+  
 3. Confirmed key network roles
 - 192.168.15.1 → Router
 - 192.168.15.4 → Suspicious user device
+  
 4. Applied protocol filters
-- tcp → general communication analysis
+- tcp → general traffic
 - http → web activity
-- dns → domain lookups
+- dns → domain queries
+  
 5. Focused on suspect device
 - ip.addr == 192.168.15.4
 - Tracked all incoming & outgoing traffic
+  
 6. Analyzed web activity
 - http && ip.addr == 192.168.15.4
-- Found:
+- Observed normal browsing:
   - Google searches
   - YouTube access
   - Amazon browsing
+    
 7. Investigated DNS behavior
-- Identified requests to:
+- Identified suspicious domain requests to:
   - sendanonymousemail.net
   - willselfdestruct.com
-8. Searched for suspicious content
-- frame contains "send+anonymous"
-- frame contains "tuckrige"
-- frame contains "mail"
+    
+8. Content-Based Filtering
+- Applied keyword filters:
+  - frame contains "send+anonymous"
+  - frame contains "tuckrige"
+  - frame contains "mail"
+- Revealed email-related activity linked to the victim
+  
 9. Tracked communication with external IP
 - ip.addr == 140.247.62.34
 - Linked to harassment target (via router)
-10. Correlated evidence
+  
+10. Evidence Correlation
 - Gmail account identified
 - Anonymous messaging activity confirmed
 - User intent observed via search behavior
-11. Reconstructed activity timeline
+  
+11. Timeline Reconstruction
 - Based on:
   - Packet numbers
   - HTTP referers
   - Timestamps
-- Example:
+- Observed flow:
   - Yahoo search → Google search → YouTube → Amazon
-  - Then suspicious activity
+  - Then suspicious activity: Transition to anonymous email activity
 ---
 
 
