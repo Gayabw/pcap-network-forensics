@@ -33,8 +33,37 @@ This project focuses on network forensics and incident response by analyzing pac
    
 ---
 ## ⚙️ Investigation Steps
+1. Initial Traffic Inspection
+- Loaded PCAP file into Wireshark
+- Reviewed overall traffic patterns
+- Identified unusual spikes and suspicious protocols
+
+2. Protocol-Based Filtering
+- Applied filters to narrow down traffic:
+- HTTP traffic inspection
+- DNS request analysis
+- Focused on suspicious external communications
+
+3. Stream Analysis
+- Used Follow TCP Stream to inspect full conversations
+- Reconstructed communication between victim and attacker
+- Identified potential payload delivery
+
+4. DNS Analysis
+- Investigated domain resolution patterns
+- Detected suspicious or abnormal domain queries
+- Linked domains to potential malicious activity
+
+5. IOC Identification
+- Extracted Indicators of Compromise:
+-- Suspicious IP addresses
+-- Malicious domains
+-- Unusual request patterns
+
+
 
 ---
+
 
 ## 📊 Key Outcomes
 - Successfully identified: Malicious traffic patterns and Suspicious external communications
