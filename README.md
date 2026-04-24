@@ -8,6 +8,7 @@ This project focuses on network forensics and incident response by analyzing pac
 - Reconstructed attack timeline using packet level evidence
 - Delivered a forensic report with evidence-backed findings
 ---
+
 ## 🎯 Objectives
 - Identify malicious or suspicious traffic
 - Apply forensic investigation workflow
@@ -16,6 +17,18 @@ This project focuses on network forensics and incident response by analyzing pac
 - Identify attacker techniques and artifacts
 - Produce evidence-based reporting
 - Recommend mitigation strategies
+
+---
+
+## Scenario
+A user (Lily Turkige) received anonymous, self-destructing harassment emails
+Investigation conducted using a provided PCAP dataset (academic lab)
+Goal:
+- Identify the source of the communication
+- Trace user activity behind the emails
+- Reconstruct the sequence of events using network evidence
+---
+
 ---
 ## 🛠️ Tools & Technologies
 - Wireshark
@@ -32,7 +45,14 @@ This project focuses on network forensics and incident response by analyzing pac
 6. Documented findings for reporting
    
 ---
-## ⚙️ Investigation Steps
+## ⚙️ Investigation Steps (With evidence)
+
+- The provided PCAP dataset simulates a network forensic investigation scenario involving suspected harassment activity: 
+- Objective was to identify:
+  - The originating device
+  - The communication behavior
+  - Evidence of anonymous messaging activity
+- Analysis was conducted using packet-level inspection in Wireshark
 1. Loaded PCAP into Wireshark
 - Reviewed capture summary (duration, packets, size)
 2. Identified active devices
@@ -80,11 +100,15 @@ This project focuses on network forensics and incident response by analyzing pac
 ---
 
 
-## 📊 Key Outcomes
-- Successfully identified: Malicious traffic patterns and Suspicious external communications
-- Reconstructed attack flow from initial access to exploitation
-- Extracted relevant IOCs for detection and prevention
-- Produced a structured forensic report with evidence-backed conclusions
+## 📊 Key Findings
+- 192.168.15.4 identified as the primary suspect device
+- Evidence of anonymous email service usage
+- DNS queries linked to:
+  - Self-destructing email platforms
+- Packet data confirmed:
+  - Harassment-related communication activity
+- User behavior showed:
+  - Transition from normal browsing → suspicious actions
 
 ---
 ## 🧠 Skills Demonstrated
