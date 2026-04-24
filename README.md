@@ -29,7 +29,6 @@ Goal:
 - Reconstruct the sequence of events using network evidence
 ---
 
----
 ## 🛠️ Tools & Technologies
 - Wireshark
 - TCP/IP, DNS, HTTP, HTTPS
