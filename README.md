@@ -33,35 +33,50 @@ This project focuses on network forensics and incident response by analyzing pac
    
 ---
 ## ⚙️ Investigation Steps
-1. Initial Traffic Inspection
-- Loaded PCAP file into Wireshark
-- Reviewed overall traffic patterns
-- Identified unusual spikes and suspicious protocols
-
-2. Protocol-Based Filtering
-- Applied filters to narrow down traffic:
-- HTTP traffic inspection
-- DNS request analysis
-- Focused on suspicious external communications
-
-3. Stream Analysis
-- Used Follow TCP Stream to inspect full conversations
-- Reconstructed communication between victim and attacker
-- Identified potential payload delivery
-
-4. DNS Analysis
-- Investigated domain resolution patterns
-- Detected suspicious or abnormal domain queries
-- Linked domains to potential malicious activity
-
-5. IOC Identification
-- Extracted Indicators of Compromise:
--- Suspicious IP addresses
--- Malicious domains
--- Unusual request patterns
-
-
-
+1. Loaded PCAP into Wireshark
+- Reviewed capture summary (duration, packets, size)
+2. Identified active devices
+- Used Statistics → Endpoints
+- Found 192.168.15.4 as highest traffic generator (suspect)
+3. Confirmed key network roles
+- 192.168.15.1 → Router
+- 192.168.15.4 → Suspicious user device
+4. Applied protocol filters
+- tcp → general communication analysis
+- http → web activity
+- dns → domain lookups
+5. Focused on suspect device
+- ip.addr == 192.168.15.4
+- Tracked all incoming & outgoing traffic
+6. Analyzed web activity
+- http && ip.addr == 192.168.15.4
+- Found:
+  - Google searches
+  - YouTube access
+  - Amazon browsing
+7. Investigated DNS behavior
+- Identified requests to:
+  - sendanonymousemail.net
+  - willselfdestruct.com
+8. Searched for suspicious content
+- frame contains "send+anonymous"
+- frame contains "tuckrige"
+- frame contains "mail"
+9. Tracked communication with external IP
+- ip.addr == 140.247.62.34
+- Linked to harassment target (via router)
+10. Correlated evidence
+- Gmail account identified
+- Anonymous messaging activity confirmed
+- User intent observed via search behavior
+11. Reconstructed activity timeline
+- Based on:
+  - Packet numbers
+  - HTTP referers
+  - Timestamps
+- Example:
+  - Yahoo search → Google search → YouTube → Amazon
+  - Then suspicious activity
 ---
 
 
