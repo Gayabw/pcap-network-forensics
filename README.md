@@ -22,7 +22,7 @@ This project focuses on network forensics and incident response by analyzing pac
 
 ## Scenario
 A user (Lily Turkige) received anonymous, self-destructing harassment emails
-Investigation conducted using a provided PCAP dataset (academic lab)
+Investigation conducted using a provided PCAP dataset (academic lab) <br>
 Goal:
 - Identify the source of the communication
 - Trace user activity behind the emails
