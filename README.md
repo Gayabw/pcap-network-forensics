@@ -72,6 +72,8 @@ evidence
   
 ![Capture Summary](./assets/01_capture_summary.png)
 
+** Figure 1: Verification of PCAP integrity using SHA hashes and capture property summary.
+
 2. Identified active devices:
 - Used Statistics → Endpoints
 - Identified 192.168.15.4 as highest traffic generator (suspect)
@@ -86,6 +88,7 @@ evidence
 4. Focused on suspect device:
 - ip.addr == 192.168.15.4
 - Tracked all incoming & outgoing traffic
+  
 ![IP traffic](./assets/04_ip_traffic.png)
   
 5. Analyzed web activity:
@@ -117,6 +120,7 @@ evidence
 - Revealed email-related activity linked to the victim
 
 ![Content Filter sendanonymous](./assets/08_content_filter.png)
+
 
 ![Content Filter Wilselfdistruct](./assets/08.1_content_filter.png)
 
