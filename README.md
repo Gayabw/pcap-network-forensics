@@ -20,17 +20,35 @@ This project focuses on network forensics and incident response by analyzing pac
 
 ---
 
-## Scenario
-A user (Lily Turkige) received anonymous, self-destructing harassment emails
-Investigation conducted using a provided PCAP dataset (academic lab) <br>
+## Case Description
+Scenario: 
+- Lily Tuckrige, a Chemistry teacher at XYZ School, reported receiving
+harassing emails on her personal email (lilytuckrige@yahoo.com). 
 Goal:
 - Identify the source of the communication
 - Trace user activity behind the emails
 - Reconstruct the sequence of events using network evidence
+Initial Evidence:
+- Emails suspected to originate from a student in her class.
+- A screenshot of the email was provided to IT department, which requested full
+headers for more details
+Findings from Email Header:
+- Emails originated from the IP address 140.247.62.34, a dorm room at XYZ
+School
+Dorm Room Details:
+- Shared by three women: Alice, Barbara, and Candice.
+- Wi-Fi router installed without a password by Barbara’s boyfriend
+IT Investigation:
+- Network sniffer set up to capture Ethernet traffic.
+- New email sent via "willselfdestruct.com," complicating direct traceability
+Goal:
+- Identify if a Chemistry 109 student sent the emails using conclusive
+evidence
 ---
 
 ## 🛠️ Tools & Technologies
-- Wireshark
+- Wireshark v 4.4.3: Network traffic analysis professionals consider this tool as their most reliable observation platform
+- platform:  Windows 10 Pro (64-bit), processor:  Intel(R) Core(TM) i3 RAM: 12 GB
 - TCP/IP, DNS, HTTP, HTTPS
 - PCAP Analysis Techniques
 - Network Forensics Methodologies
@@ -108,15 +126,22 @@ Goal:
 
 
 ## 📊 Key Findings
-- 192.168.15.4 identified as the primary suspect device
-- Evidence of anonymous email service usage
-- DNS queries linked to:
-  - Self-destructing email platforms
-- Packet data confirmed:
-  - Harassment-related communication activity
-- User behavior showed:
-  - Transition from normal browsing → suspicious actions
-
+1. File Security & Timeframe:
+- Verified MD5, SHA1, and SHA256 checksums for forensic integrity.
+- Captured data spans July 22, 2008, 01:51 - 06:13 UTC.
+2. Network Details:
+- 17 devices identified on the subnet 192.168.15.XX.
+- Gateway IP: 192.168.15.1; Suspect IP: 192.168.15.4 (Apple device).
+3. Investigation Findings:
+- Harassing emails sent via sendanonymousemail.net and willselfdestruct.com.
+- Email trace linked to jcoachj@gmail.com (Packet #77528).
+- Searches by the suspect: “want to harass my teacher.”
+4. Key Technical Evidence:
+- Filters applied: ip.addr == 192.168.15.4 and frame contains "tuckrige".
+- Virtual Machine detected: Windows XP (via Apple hardware).
+5. Identification:
+- Logs confirm suspect is Johnny Coach, Chemistry 109 student.
+- Connection to nitroba.org, origin of initial harassing emails.
 ---
 ## 🧠 Skills Demonstrated
 - Network Traffic Analysis
