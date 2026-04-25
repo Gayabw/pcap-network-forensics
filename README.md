@@ -87,24 +87,24 @@ evidence
   
 ![Active Endpoints](./assets/02_endpoint_stats.png)
 
-* Figure 2: IPv4 endpoint statistics identifying 192.168.15.4 as the primary traffic generator.
+* Figure 2: IPv4 endpoint statistics identifying 192.168.15.4 as the primary traffic generator.*
 
-
+<br>
 3. **Applied protocol filters**:
 - tcp → general traffic
 - http → web activity
 - dns → domain queries
 
-
+<br>
 4. **Focused on suspect device**:
 - ip.addr == 192.168.15.4
 - Tracked all incoming & outgoing traffic
   
 ![IP traffic](./assets/04_ip_traffic.png)
 
-* Figure 4: Filtered traffic stream isolating all communications for the suspect host.
+* Figure 3: Filtered traffic stream isolating all communications for the suspect host.*
 
- 
+<br>
 5. Analyzed web activity:
 - http && ip.addr == 192.168.15.4
 - Observed normal browsing:
@@ -114,17 +114,17 @@ evidence
 
 ![Web Activity](./assets/05_web_activity.png)
 
-* Figure 5: Analysis of HTTP GET requests revealing the suspect's browsing patterns.
+* Figure 4: Analysis of HTTP requests revealing the suspect's browsing patterns.*
 
-
+<br>
 6. Network Infrastructure Reconstruction
 - Visualized the communication flow between the suspect, the router, and external services (Amazon, Google, etc.).
 
 ![Network Structure](./assets/06_network_structure.png)
 
-* Figure 6: Reconstructed logical network topology mapping the suspect to the gateway.
+* Figure 5: Reconstructed logical network topology mapping the suspect to the gateway.*
 
-
+<br>
 7. Investigated DNS behavior:
 - Identified suspicious domain requests to:
   - sendanonymousemail.net
@@ -132,9 +132,9 @@ evidence
 
 ![DNS Behavior](./assets/07_dns_behavior.png)
 
-* Figure 7: DNS query logs revealing requests to known anonymous email relay services.
+* Figure 6: DNS behavior revealing requests to known anonymous email relay services.*
 
-    
+ <br>   
 8. Content-Based Filtering:
 - Applied keyword filters:
   - frame contains "send+anonymous"
@@ -144,18 +144,23 @@ evidence
 
 ![Content Filter sendanonymous](./assets/08_content_filter.png)
 
+* Figure 7: DNS behavior revealing requests to known anonymous email relay services.*
+  
 
 ![Content Filter Wilselfdistruct](./assets/08.1_content_filter.png)
 
+* Figure 8: DNS behavior revealing requests to known anonymous email relay services.*
+
+<br>
 9. Tracked communication with external IP:
 - ip.addr == 140.247.62.34
 - Linked to harassment target (via router)
 
 ![External IP](./assets/09_track_external_ip.png)
 
-* Figure 10: Trace of packets directed toward the victim's external IP address (140.247.62.34).
+* Figure 9: Trace of packets directed toward the victim's external IP address (140.247.62.34).*
   
-
+<br>
 10. Evidence Correlation:
 - Gmail account identified
 - Anonymous messaging activity confirmed
@@ -163,9 +168,9 @@ evidence
 
 ![Email Evidence](./assets/10_email_evidence.png)
 
-* Figure 11: Correlation of session cookies and headers revealing the culprit’s Gmail identity.
+* Figure 10: Correlation of session cookies and headers revealing the culprit’s Gmail identity.*
   
-  
+<br>
 11. Timeline Reconstruction:
 - Based on:
   - Packet numbers
@@ -177,7 +182,7 @@ evidence
 
 ![Timeline](./assets/11_activity_timeline.png)
 
-* Figure 12: Chronological sequence of events from benign browsing to the harassment incident.
+* Figure 11: Chronological sequence of events from benign browsing to the harassment incident.*
 
 ---
 
