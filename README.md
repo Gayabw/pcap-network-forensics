@@ -70,13 +70,13 @@ evidence
 - Loaded PCAP into Wireshark
 - Reviewed capture summary (duration, packets, size): erified file integrity using SHA256/SHA1 hashes and established the capture timeframe.
   
-![Figure 1: Capture Summary](./assets/01_capture_summary.png)
+![Capture Summary](./assets/01_capture_summary.png)
 
 2. Identified active devices:
 - Used Statistics → Endpoints
 - Identified 192.168.15.4 as highest traffic generator (suspect)
   
-![Figure 2: Active Endpoints](./assets/02_endpoint_status.png)
+![Active Endpoints](./assets/02_endpoint_status.png)
 
 3. Applied protocol filters:
 - tcp → general traffic
@@ -86,7 +86,7 @@ evidence
 4. Focused on suspect device:
 - ip.addr == 192.168.15.4
 - Tracked all incoming & outgoing traffic
-![Figure 3: Capture Summary](./assets/04_ip_traffic.png)
+![IP traffic](./assets/04_ip_traffic.png)
   
 5. Analyzed web activity:
 - http && ip.addr == 192.168.15.4
@@ -95,19 +95,19 @@ evidence
   - YouTube access
   - Amazon browsing
 
-![Figure 3: Capture Summary](./assets/05_web_activity.png)
+![Web Activity](./assets/05_web_activity.png)
 
 6. Network Infrastructure Reconstruction
 - Visualized the communication flow between the suspect, the router, and external services (Amazon, Google, etc.).
 
-![Figure 3: Capture Summary](./assets/06_network_structure.png)
+![Network Structure](./assets/06_network_structure.png)
 
 7. Investigated DNS behavior:
 - Identified suspicious domain requests to:
   - sendanonymousemail.net
   - willselfdestruct.com
 
-![Figure 3: Capture Summary](./assets/07_dns_behavior.png)
+![DNS Behavior](./assets/07_dns_behavior.png)
     
 8. Content-Based Filtering:
 - Applied keyword filters:
@@ -116,22 +116,22 @@ evidence
   - frame contains "mail"
 - Revealed email-related activity linked to the victim
 
-![Figure 3: Capture Summary](./assets/08_content_filter.png)
+![Content Filter sendanonymous](./assets/08_content_filter.png)
 
-![Figure 3: Capture Summary](./assets/08.1_content_filter.png)
+![Content Filter Wilselfdistruct](./assets/08.1_content_filter.png)
 
 9. Tracked communication with external IP:
 - ip.addr == 140.247.62.34
 - Linked to harassment target (via router)
 
-![Figure 3: Capture Summary](./assets/09_track_external_ip.png)
+![External IP](./assets/09_track_external_ip.png)
 
 10. Evidence Correlation:
 - Gmail account identified
 - Anonymous messaging activity confirmed
 - User intent observed via search behavior
 
-![Figure 3: Capture Summary](./assets/10_email_evidence.png)
+![Email Evidence](./assets/10_email_evidence.png)
   
 11. Timeline Reconstruction:
 - Based on:
@@ -142,7 +142,7 @@ evidence
   - Yahoo search → Google search → YouTube → Amazon
   - Then suspicious activity: Transition to anonymous email activity
 
-![Figure 3: Capture Summary](./assets/11_activity_timeline.png)
+![Timeline](./assets/11_activity_timeline.png)
 
 ---
 
