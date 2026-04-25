@@ -78,7 +78,7 @@ evidence
   
 ![Capture Summary](./assets/01_capture_summary.png)
 
-* Figure 1: Verification of PCAP integrity using SHA hashes and capture property summary.
+*Figure 1: Verification of PCAP integrity using SHA hashes and capture property summary.*
 
 
 2. **Identified active devices**:
