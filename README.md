@@ -66,56 +66,56 @@ evidence
 ## ⚙️ Investigation Steps (With evidence)
 
 
-1. Initial Traffic Analysis
+1. Initial Traffic Analysis:
 - Loaded PCAP into Wireshark
 - Reviewed capture summary (duration, packets, size)
   
-2. Identified active devices
+2. Identified active devices:
 - Used Statistics → Endpoints
 - Identified 192.168.15.4 as highest traffic generator (suspect)
   
-3. Confirmed key network roles
+3. Confirmed key network roles:
 - 192.168.15.1 → Router
 - 192.168.15.4 → Suspicious user device
   
-4. Applied protocol filters
+4. Applied protocol filters:
 - tcp → general traffic
 - http → web activity
 - dns → domain queries
   
-5. Focused on suspect device
+5. Focused on suspect device:
 - ip.addr == 192.168.15.4
 - Tracked all incoming & outgoing traffic
   
-6. Analyzed web activity
+6. Analyzed web activity:
 - http && ip.addr == 192.168.15.4
 - Observed normal browsing:
   - Google searches
   - YouTube access
   - Amazon browsing
     
-7. Investigated DNS behavior
+7. Investigated DNS behavior:
 - Identified suspicious domain requests to:
   - sendanonymousemail.net
   - willselfdestruct.com
     
-8. Content-Based Filtering
+8. Content-Based Filtering:
 - Applied keyword filters:
   - frame contains "send+anonymous"
   - frame contains "tuckrige"
   - frame contains "mail"
 - Revealed email-related activity linked to the victim
   
-9. Tracked communication with external IP
+9. Tracked communication with external IP:
 - ip.addr == 140.247.62.34
 - Linked to harassment target (via router)
   
-10. Evidence Correlation
+10. Evidence Correlation:
 - Gmail account identified
 - Anonymous messaging activity confirmed
 - User intent observed via search behavior
   
-11. Timeline Reconstruction
+11. Timeline Reconstruction:
 - Based on:
   - Packet numbers
   - HTTP referers
@@ -128,21 +128,31 @@ evidence
 
 ## 📊 Key Findings
 1. File Security & Timeframe:
+   
 - Verified MD5, SHA1, and SHA256 checksums for forensic integrity.
 - Captured data spans July 22, 2008, 01:51 - 06:13 UTC.
+  
 2. Network Details:
+   
 - 17 devices identified on the subnet 192.168.15.XX.
 - Gateway IP: 192.168.15.1; Suspect IP: 192.168.15.4 (Apple device).
+
 3. Investigation Findings:
+   
 - Harassing emails sent via sendanonymousemail.net and willselfdestruct.com.
 - Email trace linked to jcoachj@gmail.com (Packet #77528).
 - Searches by the suspect: “want to harass my teacher.”
+  
 4. Key Technical Evidence:
+   
 - Filters applied: ip.addr == 192.168.15.4 and frame contains "tuckrige".
 - Virtual Machine detected: Windows XP (via Apple hardware).
+  
 5. Identification:
+   
 - Logs confirm suspect is Johnny Coach, Chemistry 109 student.
 - Connection to nitroba.org, origin of initial harassing emails.
+  
 ---
 ## 🧠 Skills Demonstrated
 - Network Traffic Analysis
