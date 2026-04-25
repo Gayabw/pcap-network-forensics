@@ -86,7 +86,7 @@ evidence
 4. Focused on suspect device:
 - ip.addr == 192.168.15.4
 - Tracked all incoming & outgoing traffic
-![Figure 3: Capture Summary](./assets/capture_summary.png)
+![Figure 3: Capture Summary](./assets/04_ip_traffic.png)
   
 5. Analyzed web activity:
 - http && ip.addr == 192.168.15.4
@@ -95,13 +95,19 @@ evidence
   - YouTube access
   - Amazon browsing
 
+![Figure 3: Capture Summary](./assets/05_web_activity.png)
+
 6. Network Infrastructure Reconstruction
 - Visualized the communication flow between the suspect, the router, and external services (Amazon, Google, etc.).
+
+![Figure 3: Capture Summary](./assets/06_network_structure.png)
 
 7. Investigated DNS behavior:
 - Identified suspicious domain requests to:
   - sendanonymousemail.net
   - willselfdestruct.com
+
+![Figure 3: Capture Summary](./assets/07_dns_behavior.png)
     
 8. Content-Based Filtering:
 - Applied keyword filters:
@@ -109,15 +115,23 @@ evidence
   - frame contains "tuckrige"
   - frame contains "mail"
 - Revealed email-related activity linked to the victim
-  
+
+![Figure 3: Capture Summary](./assets/08_content_filter.png)
+
+![Figure 3: Capture Summary](./assets/08.1_content_filter.png)
+
 9. Tracked communication with external IP:
 - ip.addr == 140.247.62.34
 - Linked to harassment target (via router)
-  
+
+![Figure 3: Capture Summary](./assets/09_track_external_ip.png)
+
 10. Evidence Correlation:
 - Gmail account identified
 - Anonymous messaging activity confirmed
 - User intent observed via search behavior
+
+![Figure 3: Capture Summary](./assets/10_email_evidence.png)
   
 11. Timeline Reconstruction:
 - Based on:
@@ -127,6 +141,9 @@ evidence
 - Observed flow:
   - Yahoo search → Google search → YouTube → Amazon
   - Then suspicious activity: Transition to anonymous email activity
+
+![Figure 3: Capture Summary](./assets/11_activity_timeline.png)
+
 ---
 
 
