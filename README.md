@@ -1,5 +1,7 @@
 # PCAP Network Packet Capture Analysis using Wireshark
+
 ---
+
 ## 📌 Overview
 This project focuses on network forensics and incident response by analyzing packet capture (PCAP) files to identify malicious activity and reconstruct attack timelines.
 
@@ -7,6 +9,7 @@ This project focuses on network forensics and incident response by analyzing pac
 - Identified Indicators of Compromise (IOCs)
 - Reconstructed attack timeline using packet level evidence
 - Delivered a forensic report with evidence-backed findings
+  
 ---
 
 ## 🎯 Objectives
@@ -45,6 +48,7 @@ IT Investigation:
 Goal:
 - Identify if a Chemistry 109 student sent the emails using conclusive
 evidence
+
 ---
 
 ## 🛠️ Tools & Technologies
@@ -53,7 +57,9 @@ evidence
 - TCP/IP, DNS, HTTP, HTTPS
 - PCAP Analysis Techniques
 - Network Forensics Methodologies
+  
 ---
+
 ## 🔍 Methodology
 1. Imported PCAP files into Wireshark
 2. Applied filters to isolate suspicious traffic: http, dns, tcp.stream
@@ -63,29 +69,31 @@ evidence
 6. Documented findings for reporting
    
 ---
+
 ## ⚙️ Investigation Steps (With evidence)
 
-
-1. Initial Traffic Analysis:
+1. **Initial Traffic Analysis**:
 - Loaded PCAP into Wireshark
 - Reviewed capture summary (duration, packets, size): erified file integrity using SHA256/SHA1 hashes and established the capture timeframe.
   
 ![Capture Summary](./assets/01_capture_summary.png)
 
-** Figure 1: Verification of PCAP integrity using SHA hashes and capture property summary.
+* Figure 1: Verification of PCAP integrity using SHA hashes and capture property summary.
 
-2. Identified active devices:
+2. **Identified active devices**:
 - Used Statistics → Endpoints
 - Identified 192.168.15.4 as highest traffic generator (suspect)
   
 ![Active Endpoints](./assets/02_endpoint_status.png)
 
-3. Applied protocol filters:
+* Figure 2: IPv4 endpoint statistics identifying 192.168.15.4 as the primary traffic generator.
+
+3. **Applied protocol filters**:
 - tcp → general traffic
 - http → web activity
 - dns → domain queries
 
-4. Focused on suspect device:
+4. **Focused on suspect device**:
 - ip.addr == 192.168.15.4
 - Tracked all incoming & outgoing traffic
   
@@ -150,7 +158,6 @@ evidence
 
 ---
 
-
 ## 📊 Key Findings
 
 1. File Security & Timeframe:
@@ -180,6 +187,7 @@ evidence
 - Connection to nitroba.org, origin of initial harassing emails.
   
 ---
+
 ## 🧠 Skills Demonstrated
 - Network Traffic Analysis
 - Packet Inspection (Wireshark)
@@ -187,7 +195,9 @@ evidence
 - Threat Detection & IOC Identification
 - Analytical Thinking & Problem Solving
 - Technical Reporting & Documentation
+  
 ---
+
 ## 🛡️ Mitigation Recommendations
 - Implement network monitoring and alerting systems
 - Block malicious IPs and domains
@@ -196,16 +206,26 @@ evidence
 - Use IDS/IPS for real-time detection
 - Regularly update and patch systems
 - Regular security monitoring and log analysis
+  
 ---
+
 ## 👩‍🎓Team Members
 - Gayathmee Kiveka
 - Minsadhi Vihasna
 
 ---
+
 ## 🎓 Academic Note
 This project was developed as part of the Bachelor of Information Technology (Cybersecurity specialization) and is intended for academic and educational purposes.
 
+[!IMPORTANT]
+To maintain academic integrity and protect the privacy of team members and institutional data:
+- **Redacted Information:** Sensitive identifiers, team member personal details, and internal institutional data have been omitted.
+- **Partial Documentation:** Only specific forensic artifacts and methodology summaries are presented here to showcase technical proficiency.
+- **Full Report:** The complete Forensic Report and original PCAP files are available for review upon request during formal interviews.
+
 ---
+
 ## 📄 License  
 This repository is provided for **academic use only**.  
 
