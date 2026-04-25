@@ -170,3 +170,7 @@ evidence
 - Use IDS/IPS for real-time detection
 - Regularly update and patch systems
 - Regular security monitoring and log analysis
+
+## Team Members
+- Gayathmee Kiveka
+- Minsadhi Vihasna
