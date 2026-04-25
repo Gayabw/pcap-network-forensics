@@ -26,29 +26,37 @@ This project focuses on network forensics and incident response by analyzing pac
 ## 📰Case Description
 Scenario: 
 - Lily Tuckrige, a Chemistry teacher at XYZ School, reported receiving
-harassing emails on her personal email (lilytuckrige@yahoo.com). 
+harassing emails on her personal email (lilytuckrige@yahoo.com).
+- She suspects the perpetrator is a student from her Chemistry 109 summer course.
 
-Initial Evidence:
-- Emails suspected to originate from a student in her class.
-- A screenshot of the email was provided to IT department, which requested full
-headers for more details
+Role: 
+- Security Administrator, XYZ School
 
-Findings from Email Header:
-- Emails originated from the IP address 140.247.62.34, a dorm room at XYZ
-School
+Evidence Chain:
+- Initial Evidence:
+  - Tuckrige provided screenshots of the harassment.
+  - Full Message Headers were later retrieved, revealing the originating IP address: 140.247.62.34.
 
-Dorm Room Details:
-- Shared by three women: Alice, Barbara, and Candice.
-- Wi-Fi router installed without a password by Barbara’s boyfriend
+- Infrastructure Findings:
+  - The IP maps directly to a specific XYZ School student dorm room.
+  - The room is occupied by three students: Alice, Barbara, and Candice.
+  - Security Vulnerability: A non-sanctioned, unencrypted (no password) Wi-Fi router was installed by Barbara's boyfriend in the room, meaning anyone within physical proximity could have utilized the connection.
   
-IT Investigation:
-- Network sniffer set up to capture Ethernet traffic.
-- New email sent via "willselfdestruct.com," complicating direct traceability
-  
+- Active Surveillance: 
+  - A network sniffer was placed on the room’s Ethernet port to log all incoming and outgoing packets.
+
+- The Incident (Monday 7/21):
+  - A new harassing message was sent via willselfdestruct.com, an anonymizing service that deletes content after viewing, bypassing traditional email trail retention.
+    
 Goal:
 - Identify if a Chemistry 109 student sent the emails using conclusive
 evidence
 
+Investigation Assets: 
+- Screenshots: The original harassment and the Yahoo Mail headers.
+- Network Logs: Raw packet captures (PCAP) from the Ethernet tap on the day of the incident.
+- Class Roster: The official list of students enrolled in Chemistry 109.
+  
 ---
 
 ## 🛠️ Tools & Technologies
