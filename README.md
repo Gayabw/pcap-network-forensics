@@ -80,25 +80,31 @@ evidence
 
 * Figure 1: Verification of PCAP integrity using SHA hashes and capture property summary.
 
+
 2. **Identified active devices**:
 - Used Statistics → Endpoints
 - Identified 192.168.15.4 as highest traffic generator (suspect)
   
-![Active Endpoints](./assets/02_endpoint_status.png)
+![Active Endpoints](./assets/02_endpoint_stats.png)
 
 * Figure 2: IPv4 endpoint statistics identifying 192.168.15.4 as the primary traffic generator.
+
 
 3. **Applied protocol filters**:
 - tcp → general traffic
 - http → web activity
 - dns → domain queries
 
+
 4. **Focused on suspect device**:
 - ip.addr == 192.168.15.4
 - Tracked all incoming & outgoing traffic
   
 ![IP traffic](./assets/04_ip_traffic.png)
-  
+
+* Figure 4: Filtered traffic stream isolating all communications for the suspect host.
+
+ 
 5. Analyzed web activity:
 - http && ip.addr == 192.168.15.4
 - Observed normal browsing:
@@ -108,10 +114,16 @@ evidence
 
 ![Web Activity](./assets/05_web_activity.png)
 
+* Figure 5: Analysis of HTTP GET requests revealing the suspect's browsing patterns.
+
+
 6. Network Infrastructure Reconstruction
 - Visualized the communication flow between the suspect, the router, and external services (Amazon, Google, etc.).
 
 ![Network Structure](./assets/06_network_structure.png)
+
+* Figure 6: Reconstructed logical network topology mapping the suspect to the gateway.
+
 
 7. Investigated DNS behavior:
 - Identified suspicious domain requests to:
@@ -119,6 +131,9 @@ evidence
   - willselfdestruct.com
 
 ![DNS Behavior](./assets/07_dns_behavior.png)
+
+* Figure 7: DNS query logs revealing requests to known anonymous email relay services.
+
     
 8. Content-Based Filtering:
 - Applied keyword filters:
@@ -138,12 +153,18 @@ evidence
 
 ![External IP](./assets/09_track_external_ip.png)
 
+* Figure 10: Trace of packets directed toward the victim's external IP address (140.247.62.34).
+  
+
 10. Evidence Correlation:
 - Gmail account identified
 - Anonymous messaging activity confirmed
 - User intent observed via search behavior
 
 ![Email Evidence](./assets/10_email_evidence.png)
+
+* Figure 11: Correlation of session cookies and headers revealing the culprit’s Gmail identity.
+  
   
 11. Timeline Reconstruction:
 - Based on:
@@ -155,6 +176,8 @@ evidence
   - Then suspicious activity: Transition to anonymous email activity
 
 ![Timeline](./assets/11_activity_timeline.png)
+
+* Figure 12: Chronological sequence of events from benign browsing to the harassment incident.
 
 ---
 
