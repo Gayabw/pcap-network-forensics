@@ -69,11 +69,13 @@ evidence
 1. Initial Traffic Analysis:
 - Loaded PCAP into Wireshark
 - Reviewed capture summary (duration, packets, size): erified file integrity using SHA256/SHA1 hashes and established the capture timeframe.
+  
 ![Figure 1: Capture Summary](./assets/01_capture_summary.png)
 
 2. Identified active devices:
 - Used Statistics → Endpoints
 - Identified 192.168.15.4 as highest traffic generator (suspect)
+  
 ![Figure 2: Active Endpoints](./assets/02_endpoint_status.png)
 
 3. Applied protocol filters:
