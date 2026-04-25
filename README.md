@@ -88,7 +88,7 @@ evidence
   
 ![Active Endpoints](./assets/02_endpoint_stats.png)
 
-* Figure 2: IPv4 endpoint statistics identifying 192.168.15.4 as the primary traffic generator.*
+*Figure 2: IPv4 endpoint statistics identifying 192.168.15.4 as the primary traffic generator.*
 
 <br>
 
@@ -105,7 +105,7 @@ evidence
   
 ![IP traffic](./assets/04_ip_traffic.png)
 
-* Figure 3: Filtered traffic stream isolating all communications for the suspect host.*
+*Figure 3: Filtered traffic stream isolating all communications for the suspect host.*
 
 <br>
 
@@ -118,7 +118,7 @@ evidence
 
 ![Web Activity](./assets/05_web_activity.png)
 
-* Figure 4: Analysis of HTTP requests revealing the suspect's browsing patterns.*
+*Figure 4: Analysis of HTTP requests revealing the suspect's browsing patterns.*
 
 <br>
 
@@ -127,7 +127,7 @@ evidence
 
 ![Network Structure](./assets/06_network_structure.png)
 
-* Figure 5: Reconstructed logical network topology mapping the suspect to the gateway.*
+*Figure 5: Reconstructed logical network topology mapping the suspect to the gateway.*
 
 <br>
 
@@ -138,7 +138,7 @@ evidence
 
 ![DNS Behavior](./assets/07_dns_behavior.png)
 
-* Figure 6: DNS behavior revealing requests to known anonymous email relay services.*
+*Figure 6: Suspicious domain requests to known anonymous email relay services.*
 
  <br>   
  
@@ -151,12 +151,12 @@ evidence
 
 ![Content Filter sendanonymous](./assets/08_content_filter.png)
 
-* Figure 7: DNS behavior revealing requests to known anonymous email relay services.*
+*Figure 7: Keyword search identifying HTTP traffic related to anonymous email platforms.*
   
 
 ![Content Filter Wilselfdistruct](./assets/08.1_content_filter.png)
 
-* Figure 8: DNS behavior revealing requests to known anonymous email relay services.*
+*Figure 8: Payload analysis confirming the delivery of the "willselfdestruct" message.*
 
 <br>
 
@@ -166,7 +166,7 @@ evidence
 
 ![External IP](./assets/09_track_external_ip.png)
 
-* Figure 9: Trace of packets directed toward the victim's external IP address (140.247.62.34).*
+*Figure 9: Traffic logs connecting the suspect to the victim's external IP address. (140.247.62.34).*
   
 <br>
 
@@ -177,7 +177,7 @@ evidence
 
 ![Email Evidence](./assets/10_email_evidence.png)
 
-* Figure 10: Correlation of session cookies and headers revealing the culprit’s Gmail identity.*
+*Figure 10: Correlation of session cookies and headers revealing the culprit’s Gmail identity.*
   
 <br>
 
@@ -192,7 +192,7 @@ evidence
 
 ![Timeline](./assets/11_activity_timeline.png)
 
-* Figure 11: Chronological sequence of events from benign browsing to the harassment incident.*
+*Figure 11: Chronological sequence of events from benign browsing to the harassment incident.*
 
 ---
 
