@@ -69,19 +69,22 @@ evidence
 1. Initial Traffic Analysis:
 - Loaded PCAP into Wireshark
 - Reviewed capture summary (duration, packets, size): erified file integrity using SHA256/SHA1 hashes and established the capture timeframe.
-  
+![Figure 1: Capture Summary](./assets/capture_summary.png)
+
 2. Identified active devices:
 - Used Statistics → Endpoints
 - Identified 192.168.15.4 as highest traffic generator (suspect)
+![Figure 2: Active Endpoints](./assets/active_devices.png)
 
 3. Applied protocol filters:
 - tcp → general traffic
 - http → web activity
 - dns → domain queries
-  
+
 4. Focused on suspect device:
 - ip.addr == 192.168.15.4
 - Tracked all incoming & outgoing traffic
+![Figure 3: Capture Summary](./assets/capture_summary.png)
   
 5. Analyzed web activity:
 - http && ip.addr == 192.168.15.4
