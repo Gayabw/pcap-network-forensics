@@ -68,32 +68,31 @@ evidence
 
 1. Initial Traffic Analysis:
 - Loaded PCAP into Wireshark
-- Reviewed capture summary (duration, packets, size)
+- Reviewed capture summary (duration, packets, size): erified file integrity using SHA256/SHA1 hashes and established the capture timeframe.
   
 2. Identified active devices:
 - Used Statistics → Endpoints
 - Identified 192.168.15.4 as highest traffic generator (suspect)
-  
-3. Confirmed key network roles:
-- 192.168.15.1 → Router
-- 192.168.15.4 → Suspicious user device
-  
-4. Applied protocol filters:
+
+3. Applied protocol filters:
 - tcp → general traffic
 - http → web activity
 - dns → domain queries
   
-5. Focused on suspect device:
+4. Focused on suspect device:
 - ip.addr == 192.168.15.4
 - Tracked all incoming & outgoing traffic
   
-6. Analyzed web activity:
+5. Analyzed web activity:
 - http && ip.addr == 192.168.15.4
 - Observed normal browsing:
   - Google searches
   - YouTube access
   - Amazon browsing
-    
+
+6. Network Infrastructure Reconstruction
+- Visualized the communication flow between the suspect, the router, and external services (Amazon, Google, etc.).
+
 7. Investigated DNS behavior:
 - Identified suspicious domain requests to:
   - sendanonymousemail.net
@@ -127,6 +126,7 @@ evidence
 
 
 ## 📊 Key Findings
+
 1. File Security & Timeframe:
    
 - Verified MD5, SHA1, and SHA256 checksums for forensic integrity.
