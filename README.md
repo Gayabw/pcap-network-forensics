@@ -74,7 +74,7 @@ evidence
 2. Identified active devices:
 - Used Statistics → Endpoints
 - Identified 192.168.15.4 as highest traffic generator (suspect)
-![Figure 2: Active Endpoints](./assets/active_devices.png)
+![Figure 2: Active Endpoints](./assets/02_endpoint_status.png)
 
 3. Applied protocol filters:
 - tcp → general traffic
