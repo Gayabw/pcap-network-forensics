@@ -24,15 +24,15 @@ This project focuses on network forensics and incident response by analyzing pac
 ---
 
 ## 📰Case Description
-Scenario: 
+**Scenario**: 
 - Lily Tuckrige, a Chemistry teacher at XYZ School, reported receiving
 harassing emails on her personal email (lilytuckrige@yahoo.com).
 - She suspects the perpetrator is a student from her Chemistry 109 summer course.
 
-Role: 
+**Role**: 
 - Security Administrator, XYZ School
 
-Evidence Chain:
+**Evidence Chain**:
 - Initial Evidence:
   - Tuckrige provided screenshots of the harassment.
   - Full Message Headers were later retrieved, revealing the originating IP address: 140.247.62.34.
@@ -48,11 +48,11 @@ Evidence Chain:
 - The Incident (Monday 7/21):
   - A new harassing message was sent via willselfdestruct.com, an anonymizing service that deletes content after viewing, bypassing traditional email trail retention.
     
-Goal:
+**Goal**:
 - Identify if a Chemistry 109 student sent the emails using conclusive
 evidence
 
-Investigation Assets: 
+**Investigation Assets**: 
 - Screenshots: The original harassment and the Yahoo Mail headers.
 - Network Logs: Raw packet captures (PCAP) from the Ethernet tap on the day of the incident.
 - Class Roster: The official list of students enrolled in Chemistry 109.
