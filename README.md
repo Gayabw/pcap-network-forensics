@@ -24,23 +24,24 @@ This project focuses on network forensics and incident response by analyzing pac
 Scenario: 
 - Lily Tuckrige, a Chemistry teacher at XYZ School, reported receiving
 harassing emails on her personal email (lilytuckrige@yahoo.com). 
-Goal:
-- Identify the source of the communication
-- Trace user activity behind the emails
-- Reconstruct the sequence of events using network evidence
+
 Initial Evidence:
 - Emails suspected to originate from a student in her class.
 - A screenshot of the email was provided to IT department, which requested full
 headers for more details
+
 Findings from Email Header:
 - Emails originated from the IP address 140.247.62.34, a dorm room at XYZ
 School
+
 Dorm Room Details:
 - Shared by three women: Alice, Barbara, and Candice.
 - Wi-Fi router installed without a password by Barbara’s boyfriend
+  
 IT Investigation:
 - Network sniffer set up to capture Ethernet traffic.
 - New email sent via "willselfdestruct.com," complicating direct traceability
+  
 Goal:
 - Identify if a Chemistry 109 student sent the emails using conclusive
 evidence
