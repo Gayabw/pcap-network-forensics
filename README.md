@@ -160,7 +160,8 @@ Investigation Assets:
 ![Content Filter sendanonymous](./assets/08_content_filter.png)
 
 *Figure 7: Keyword search identifying HTTP traffic related to anonymous email platforms.*
-  
+
+<br>
 
 ![Content Filter Wilselfdistruct](./assets/08.1_content_filter.png)
 
@@ -206,28 +207,28 @@ Investigation Assets:
 
 ## 📊 Key Findings
 
-1. File Security & Timeframe:
+1. **File Security & Timeframe**:
    
 - Verified MD5, SHA1, and SHA256 checksums for forensic integrity.
 - Captured data spans July 22, 2008, 01:51 - 06:13 UTC.
   
-2. Network Details:
+2. **Network Details**:
    
 - 17 devices identified on the subnet 192.168.15.XX.
 - Gateway IP: 192.168.15.1; Suspect IP: 192.168.15.4 (Apple device).
 
-3. Investigation Findings:
+3. **Investigation Findings**:
    
 - Harassing emails sent via sendanonymousemail.net and willselfdestruct.com.
 - Email trace linked to jcoachj@gmail.com (Packet #77528).
 - Searches by the suspect: “want to harass my teacher.”
   
-4. Key Technical Evidence:
+4. **Key Technical Evidence**:
    
 - Filters applied: ip.addr == 192.168.15.4 and frame contains "tuckrige".
 - Virtual Machine detected: Windows XP (via Apple hardware).
   
-5. Identification:
+5. **Identification**:
    
 - Logs confirm suspect is Johnny Coach, Chemistry 109 student.
 - Connection to nitroba.org, origin of initial harassing emails.
