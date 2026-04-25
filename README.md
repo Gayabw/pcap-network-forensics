@@ -69,7 +69,7 @@ evidence
 1. Initial Traffic Analysis:
 - Loaded PCAP into Wireshark
 - Reviewed capture summary (duration, packets, size): erified file integrity using SHA256/SHA1 hashes and established the capture timeframe.
-![Figure 1: Capture Summary](./assets/capture_summary.png)
+![Figure 1: Capture Summary](./assets/1.capture_summary.png)
 
 2. Identified active devices:
 - Used Statistics → Endpoints
