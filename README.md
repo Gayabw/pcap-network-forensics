@@ -20,7 +20,7 @@ This project focuses on network forensics and incident response by analyzing pac
 
 ---
 
-## Case Description
+## 📰Case Description
 Scenario: 
 - Lily Tuckrige, a Chemistry teacher at XYZ School, reported receiving
 harassing emails on her personal email (lilytuckrige@yahoo.com). 
@@ -171,14 +171,16 @@ evidence
 - Regularly update and patch systems
 - Regular security monitoring and log analysis
 ---
-## Team Members
+## 👩‍🎓Team Members
 - Gayathmee Kiveka
 - Minsadhi Vihasna
 
 ---
+## 🎓 Academic Note
+This project was developed as part of the Bachelor of Information Technology (Cybersecurity specialization) and is intended for academic and educational purposes.
 
+---
 ## 📄 License  
-
 This repository is provided for **academic use only**.  
 
 
