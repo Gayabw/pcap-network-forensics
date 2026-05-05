@@ -96,7 +96,7 @@ evidence
   
 ![Active Endpoints](./assets/02_endpoint_stats.png)
 
-*Figure 2: IPv4 endpoint statistics identifying 192.168.15.4 as the primary traffic generator.*
+*Figure 2: Ethernet endpoint statistics identifying 192.168.15.4 as the primary traffic generator.*
 
 <br>
 
