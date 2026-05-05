@@ -6,20 +6,10 @@
 This project focuses on network forensics and incident response by analyzing packet capture (PCAP) files to identify malicious activity and reconstruct attack timelines.
 
 - Performed deep packet inspection using Wireshark
-- Identified Indicators of Compromise (IOCs)
-- Reconstructed attack timeline using packet level evidence
+- Applied forensic investigation workflow
+- Identified attacker techniques and artifacts
+- Reconstructed attack timeline 
 - Delivered a forensic report with evidence-backed findings
-  
----
-
-## 🎯 Objectives
-- Identify malicious or suspicious traffic
-- Apply forensic investigation workflow
-- Analyze packet-level behavior
-- Reconstruct the sequence of an attack
-- Identify attacker techniques and artifacts
-- Produce evidence-based reporting
-- Recommend mitigation strategies
 
 ---
 
@@ -239,7 +229,6 @@ evidence
 - Network Traffic Analysis
 - Packet Inspection (Wireshark)
 - Incident Investigation & Timeline Reconstruction
-- Threat Detection & IOC Identification
 - Analytical Thinking & Problem Solving
 - Technical Reporting & Documentation
   
